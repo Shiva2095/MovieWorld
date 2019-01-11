@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+   {%block body_block%}
+   <div class="jumbotron" align="center">
+      <div class="container">
+        <h3>Movie Release Date      : {{movie.rdate}} </h3><hr>
+        <h3>Movie Name              : {{movie.movien}} </h3><hr>
+        <h3>Movie Hero              : {{movie.hero}} </h3><hr>
+        <h3>Movie Heroin            : {{movie.heroin}}</h3><hr>
+        <h3>Movie Rating            : {{movie.rating}}/10 </h3><hr>
+
+        <a href="/update/{{movie.id}}" class='btn btn-lg btn-warning '>Update Movie Info</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="/delete/{{movie.id}}" class='btn btn-lg btn-danger '>Delete Movie Info</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        
+      </div>
+   {% endblock%}

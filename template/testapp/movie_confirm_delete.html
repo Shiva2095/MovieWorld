@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+   {%block body_block%}
+   <div class="jumbotron" align="center">
+      <div class="container">
+        <h1>Are You sure to  Delete {{Movie.name}}!!!!</h1>
+        <form  method="post">
+          {%csrf_token%}
+          <input type="submit" class='btn btn-lg btn-danger'  value="Delete Record">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="/{{movie.id}}" class='btn btn-lg btn-success'>Cancel</a>
+        </form>
+      </div>
+    </div>
+   {% endblock%}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html'%}
+   {%block body_block%}
+   <div class="jumbotron" align="center">
+      <div class="container">
+        <h1>Latest Movies</h1><hr>
+        <h3>Click to Movie Name to Update or Delete </h3><hr>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Release Date</th>
+              <th>Movie Name</th>
+              <th>Actor Name</th>
+              <th>Actress Name</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%for movie in movie_list%}
+            <tr >
+                <td>{{movie.rdate}}</td>
+                <td>{{movie.movien}}</td>
+                 <td>{{movie.hero}}</td>
+                 <td>{{movie.heroin}}</td>
+                 <td>{{movie.rating}}/10</td>
+                 <td><a href="/update/{{movie.id}}" class='btn btn-lg btn-warning '>Update</a></td>
+                 <td><a href="/delete/{{movie.id}}" class='btn btn-lg btn-danger '>Delete</a></td>
+
+            {%endfor%}
+          </tr>
+        </tbody>
+        </table>
+
+        <a href="/create" class='btn btn-lg btn-success'>Add New Movie</a>
+      </div>
+
+    </div>
+
+   {% endblock%}

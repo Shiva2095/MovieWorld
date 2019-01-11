@@ -1,0 +1,17 @@
+.jumbotron{
+  color: Black;
+    background-image: url("../image/b_b.jpg");
+  margin-top: 70px;
+  margin-left: 70px;
+  margin-right: 70px;
+
+}
+body{
+  background: url("../image/back.jpg");
+
+tr{
+  color:black;
+}
+a{
+  color: red;
+}
